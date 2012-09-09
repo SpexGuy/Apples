@@ -30,6 +30,7 @@ public class RedCard extends Card {
 	private static Deck<RedCard> cards;
 	
 	public static void init() {
+		cards = new Deck<RedCard>();
 		File f = new File(RED_CARD_FILE);
 		FileReader r;
 		BufferedReader reader;

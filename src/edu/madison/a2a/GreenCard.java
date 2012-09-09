@@ -41,6 +41,7 @@ public class GreenCard extends Card {
 	private static Deck<GreenCard> cards;
 	
 	public static void init() {
+		cards = new Deck<GreenCard>();
 		File f = new File(GREEN_CARD_FILE);
 		FileReader r;
 		BufferedReader reader;

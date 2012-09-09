@@ -6,7 +6,7 @@ import java.util.List;
 public class Deck<T extends Card> {
 	private List<T> cards;
 	
-	public Deck(List<T> cards) {
+	public Deck() {
 		this.cards = new LinkedList<T>(cards);
 	}
 	
