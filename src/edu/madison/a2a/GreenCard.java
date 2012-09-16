@@ -11,10 +11,12 @@ import org.simple.graphics.SGImage;
 
 public class GreenCard extends Card {
 	
+	private static final long serialVersionUID = 2132362466524386140L;
+	
 	protected static BufferedImage background;
 	protected static SGImage getNewBackground() {
 		if (background == null) {
-			background = new SGImage(0,0,GREEN_CARD_IMAGE_FILE).getImage();
+			background = new SGImage(0,0,RedCard.RED_CARD_BACK_IMAGE_FILE).getImage();
 		}
 		return new SGImage(0,0,background);
 	}
@@ -69,5 +71,9 @@ public class GreenCard extends Card {
 	public static Deck<GreenCard> getDeck() {
 		return cards;
 	}
-
+	
+	@Override
+	protected void resetBackground() {
+		super.background = getNewBackground();
+	}
 }

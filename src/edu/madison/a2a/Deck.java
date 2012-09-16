@@ -1,5 +1,6 @@
 package edu.madison.a2a;
 
+import java.util.Collection;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -7,7 +8,7 @@ public class Deck<T extends Card> {
 	private List<T> cards;
 	
 	public Deck() {
-		this.cards = new LinkedList<T>(cards);
+		this.cards = new LinkedList<T>();
 	}
 	
 	public T drawRandomCard() {
@@ -19,8 +20,8 @@ public class Deck<T extends Card> {
 		cards.add(card);
 	}
 	
-	public void addAll(List<T> cards) {
-		this.cards.addAll(cards);
+	public void addAll(Collection<T> list) {
+		this.cards.addAll(list);
 	}
 	
 	public static int randomInt(int min, int max) {
